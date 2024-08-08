@@ -4,10 +4,6 @@
  */
 package exAnimal;
 
-/**
- *
- * @author Dell
- */
 public class Animais {
 
     private String nome;
@@ -67,7 +63,7 @@ public class Animais {
     }
     
     public String nasceu() {
-        return "O animal se chama " +nome+ ", é da classe " +classe+ " da família " +familia+ ". O animal possui força de " +forca+ ", caloria de " +caloria+ " e idade de " +idade;
+        return "\nO animal se chama " +this.getNome()+ ", pertence a classe " +this.getClasse()+ " da familia " +this.getFamilia()+ ".\n" +this.getNome()+ " possui forca = " +this.getForca()+ ", caloria = " +this.getCaloria()+ " e idade = " +this.getIdade();
     }
     
     public String morrer() {
@@ -78,23 +74,44 @@ public class Animais {
     }
     
     public String comer() {
-        this.forca -= 2;
-        this.caloria +=10;
+        String mensagem;
+        if (this.caloria < 100 && this.forca > 0) {
+            this.forca -= 2;
+            this.caloria +=10;
+            
+            mensagem = "O animal comeu!\nForca = " +this.getForca()+ " Calorias = " +this.getCaloria();
+        } else {
+            mensagem = "O animal nao quer comer agora!\nForca = " +this.getForca()+ " Calorias = " +this.getCaloria();
+        }
         
-        return "O animal comeu! Forca = " +forca+ ", Calorias = " +caloria;
+        return mensagem;
     }
     
     public String correr() {
-        this.forca -= 5;
-        this.caloria -=5;
+        String mensagem;
+        if(this.forca > 0 && this.caloria > 0) {
+            this.forca -= 5;
+            this.caloria -=5;
+            
+            mensagem = "O animal correu!\nForca = " +this.getForca()+ " Calorias = " +this.getCaloria();
+        } else {
+            mensagem = "O animal nao quer correr!\nForca = " +this.getForca()+ " Calorias = " +this.getCaloria();
+        }
         
-        return "O animal correu! Forca = " +forca+ ", Calorias = " +caloria;
+        return mensagem;
     }
     
     public String dormir() {
-        this.forca += 10;
-        this.caloria -= 2;
+        String mensagem;
+        if(this.forca < 100 && this.caloria > 0) {
+            this.forca += 10;
+            this.caloria -= 2;
+            
+            mensagem = "O animal dormiu!\nForca = " +this.getForca()+ " Calorias = " +this.getCaloria();
+        } else {
+            mensagem = "O animal nao quer dormir agora!\nForca = " +this.getForca()+ " Calorias = " +this.getCaloria();
+        }
         
-        return "O animal dormiu! Forca = " +forca+ ", Calorias = " +caloria;
+        return mensagem;
     }
 }
