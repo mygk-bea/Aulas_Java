@@ -2,24 +2,23 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package formas;
+package com.mycompany.exerciciopolimorfismo;
 
-import java.util.*;
 import java.util.Scanner;
 
 abstract class Quadrilatero {
     String nome;
-    protected float largura;
-    protected float altura;
+    protected double largura;
+    protected double altura;
  
-    public Quadrilatero(String nome, float largura, float altura) {
-        this.nome = nome;
-        this.largura = largura;
-        this.altura = altura;
+    public Quadrilatero() {
+        this.nome = "Forma";
+        this.largura = 1;
+        this.altura = 1;
     }
     
-    public abstract float calcularArea();
-    public abstract float calcularPerimetro();
+    public abstract double calcularArea();
+    public abstract double calcularPerimetro();
     
     public void setAltura(float alt) {
         this.altura = alt;
@@ -31,10 +30,10 @@ abstract class Quadrilatero {
         this.nome = n;
     }
     
-    public float getAltura() {
+    public double getAltura() {
         return this.altura;
     }
-    public float getLargura() {
+    public double getLargura() {
         return this.largura;
     }
     public String getNome() {
