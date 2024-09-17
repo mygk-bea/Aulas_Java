@@ -1,2 +1,2 @@
-# Aulas_Java
-Repositório de aulas de Java da FATEC
+# Técnicas de Programação Avançada
+Repositório de aulas de programação da FATEC
