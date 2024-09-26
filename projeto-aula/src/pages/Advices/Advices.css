@@ -1,0 +1,28 @@
+.container_advices{
+  .generate_advices{
+    margin: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .content{
+      display: flex;
+      padding: 20px;
+      border-radius: 20px;
+      background: #EEE;
+
+      .response{
+        padding: 0 10px;
+        margin-left: 20px;
+        border-radius: 5px;
+        width: 250px;
+        height: auto;
+        background: #FFF;
+
+        h1{
+          text-align: center;
+        }
+      }
+    }
+  }
+}
