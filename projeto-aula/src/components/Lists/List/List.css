@@ -1,0 +1,13 @@
+.list_item{
+    display: flex;
+    .inner{
+        height: 200px;
+        width: 200px;
+        overflow: hidden;
+        border-radius: 50%;
+    
+        img{
+            width: 100%;
+        }
+    }
+}

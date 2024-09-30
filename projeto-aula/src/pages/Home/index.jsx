@@ -8,6 +8,8 @@ function Home() {
         <h1>Projetos</h1>
         <div className="content">
           <Card nome="Ganhe um Conselho!" aula="Aula 7" data="09/09/2024" rota="/conselhos"/>
+          <Card nome="Listas - Exercício" aula="Aula 8" data="16/09/2024" rota="/listas-exercicio"/>
+          <Card nome="Ganhe um Conselho!" aula="Aula 9" data="23/09/2024" rota="/conselhos"/>
         </div>
       </div>
     </main>
