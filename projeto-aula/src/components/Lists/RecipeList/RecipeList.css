@@ -1,0 +1,19 @@
+.container_recipes{
+  background: #333;
+  padding: 20px;
+
+  .item{
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    background: #FFF;
+
+    h2{
+      margin: 10px 0;
+    }
+
+    ul{
+      margin-left: 20px;
+    }
+  }
+}

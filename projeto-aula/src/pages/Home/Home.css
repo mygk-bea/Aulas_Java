@@ -27,7 +27,7 @@
       padding: 10px;
       border-radius: 15px;
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
       box-shadow: inset rgba(0, 0, 0, 0.7) 0px 0px 60px -12px;
     }
   }

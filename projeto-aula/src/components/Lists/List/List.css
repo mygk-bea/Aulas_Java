@@ -1,13 +1,19 @@
 .list_item{
     display: flex;
+    margin: 10px 0;
     .inner{
-        height: 200px;
-        width: 200px;
+        max-height: 90px;
+        min-width: 90px;
+        max-width: 90px;
         overflow: hidden;
         border-radius: 50%;
     
         img{
             width: 100%;
         }
+    }
+
+    p{
+        margin-left: 10px;
     }
 }

@@ -1,0 +1,11 @@
+.poem {
+  background: #EEE;
+  color: #333;
+  padding: 15px;
+  width: 200px;
+  margin: 10px;
+
+  p:nth-child(2){
+    margin: 30px 0;
+  }
+}

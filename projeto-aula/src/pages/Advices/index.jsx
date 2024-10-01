@@ -4,6 +4,7 @@ import HeaderAdvice from '../../components/Advices/Header';
 import './Advices.css';
 
 function Advices() {
+
     return (
         <>
             <HeaderAdvice/>
@@ -13,7 +14,6 @@ function Advices() {
                         <FormAdvice/>
                         <div className="response">
                             <h1>Resultado</h1>
-
                         </div>
                     </div>
                 </section>

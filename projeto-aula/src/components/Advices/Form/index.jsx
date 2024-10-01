@@ -1,8 +1,23 @@
+import { useState } from 'react';
 import './Form.css';
 
 function FormAdvice() {
+  // let url = "https://api.adviceslip.com/";
+
+  // url += (typeAdvice == 1) ? "advice": "daily_adviceslip.rss";
+
+  // fetch(url)
+  // .then(response => response.json())
+  // .then(dados => {
+  //   console.log(dados)
+  //   console.log(dados.slip.advice)
+  // });
+
+  // const [nome, setnome] = useState('');
+  // const [typeAdvice, setTypeAdvice] = useState('');
+
   return (
-    <form action="">
+    <form>
       <h1>Título</h1>
 
       <div className="input_form">
@@ -14,9 +29,10 @@ function FormAdvice() {
         <textarea name="" id=""></textarea>
       </div>
       <div className="input_form">
-        <label htmlFor="">nome_label</label>
-        <select name="" id="">
-          <option value=""></option>
+        <label htmlFor="">Escolha o tipo de conselho: </label>
+        <select name="" id="" placeholder="Selecione...">
+          <option value="1"></option>
+          <option value="2"></option>
         </select>
       </div>
 
