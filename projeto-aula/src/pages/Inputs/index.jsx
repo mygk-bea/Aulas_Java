@@ -1,7 +1,9 @@
 import ColorSwitch from "../../components/Inputs/ColorSwitch";
+import FeedbackButton from "../../components/Inputs/FeedbackButton";
+import FeedbackForm from "../../components/Inputs/FeedbackForm";
+import Form from "../../components/Inputs/Form";
 import Gallery from "../../components/Inputs/Gallery";
 import LightSwitch from "../../components/Inputs/LightSwitch";
-
 
 function ExInputs() {
     function handleColorChange() {
@@ -12,7 +14,10 @@ function ExInputs() {
         <>
             <LightSwitch />
             <ColorSwitch onChangeColor={handleColorChange} />
-            <Gallery/>
+            <Gallery />
+            <Form />
+            <FeedbackForm />
+            <FeedbackButton />
         </>
     );
 }

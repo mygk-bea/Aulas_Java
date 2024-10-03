@@ -9,24 +9,15 @@ export default function Gallery() {
     const [isBackDisabled, setIsBackDisabled] = useState(true);
 
     function handleNextClick() {
-        if(index+1 == sculptureList.length) {
-            setIsNextDisabled(!isNextDisabled);
-        } else setIndex(index +1);
-        if(index == 0) {
-            setIsBackDisabled(!isBackDisabled);
-        }
-        console.log(index)
+        setIndex(index+1);
+        if(index+2 == sculptureList.length) setIsNextDisabled(!isNextDisabled);
+        if(index+1 != 0) setIsBackDisabled(false);
     }
 
     function handleBackClick() {
-        if(index == 0) {
-            setIsBackDisabled(!isBackDisabled);
-        } else setIndex(index -1);
-        
-        if(index+1 < sculptureList.length) {
-            setIsNextDisabled(!isNextDisabled);
-        }
-        console.log(index)  
+        setIndex(index-1);
+        if(index == 1) setIsBackDisabled(true);
+        if(index+2 != sculptureList.length) setIsNextDisabled(false);
     }
 
     function handleMoreClick() {
@@ -41,8 +32,7 @@ export default function Gallery() {
             <button onClick={handleBackClick} disabled={isBackDisabled}>Back</button>
 
             <h2>
-                <i>{sculpture.name}</i>
-                by {sculpture.artist}
+                <i>{sculpture.name}</i> by {sculpture.artist}
             </h2>
             <h3>
                 ({index +1} of {sculptureList.length})
