@@ -30,15 +30,17 @@ function CatchErrors() {
       <Header />
       <main className={styles.container}>
         <section className={styles.generate}>
-          <div className={styles.content}>
+          <div className={styles.form}>
             <Form registeredData={handleDataUpdate}/>
           </div>
           <div className={styles.response}>
             <h1>Código {statusCode}</h1>
             <div className={styles.catImage}>
               {catUrl && <img src={catUrl} alt={`Erro ${statusCode}`} />}
-              <h3>{errorDescription} </h3>
-              {errorExplanation && <p>{errorExplanation}</p>}
+              <div className={styles.description}>
+                <h3>{errorDescription} </h3>
+                {errorExplanation && <p>{errorExplanation}</p>}
+              </div>
             </div>
           </div>
         </section>

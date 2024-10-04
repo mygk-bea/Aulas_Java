@@ -36,33 +36,35 @@ function Form(props) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h1>Encontre um Gatinho</h1>
+    <div className={styles.form}>
+      <form onSubmit={handleSubmit}>
+        <h1>Encontre um Gatinho</h1>
 
-      <div className={styles.input_form}>
-        <label>Escolha o código de status: </label>
-        <select value={selectedCode} onChange={handleChange}>
-          <option value="0" hidden>Selecione...</option>
-          {httpErrorsExplanation.map(error => (
-            <option key={error.code} value={error.code}>{`${error.code}`}</option>
-          ))}
-        </select>
-      </div>
+        <div className={styles.input_form}>
+          <label>Escolha o código de status: </label>
+          <select value={selectedCode} onChange={handleChange}>
+            <option value="0" hidden>Selecione...</option>
+            {httpErrorsExplanation.map(error => (
+              <option key={error.code} value={error.code}>{`${error.code}`}</option>
+            ))}
+          </select>
+        </div>
 
-      <div className={styles.input_form}>
-        <label>Descrição: </label>
-        <input type="text" id='' value={description} readOnly/>
-      </div>
+        <div className={styles.input_form}>
+          <label>Descrição: </label>
+          <input type="text" id='' value={description} readOnly/>
+        </div>
 
-      <div className={styles.input_form}>
-        <label>Explicação: </label>
-        <textarea name="" id="" value={explanation} readOnly></textarea>
-      </div>
+        <div className={styles.input_form}>
+          <label>Explicação: </label>
+          <textarea name="" id="" value={explanation} readOnly></textarea>
+        </div>
 
-      <div className={styles.btn_form}>
-        <button type='submit'>Enviar</button>
-      </div>
-    </form>
+        <div className={styles.btn_form}>
+          <button type='submit'>Enviar</button>
+        </div>
+      </form>
+    </div>
   )
 }
 
