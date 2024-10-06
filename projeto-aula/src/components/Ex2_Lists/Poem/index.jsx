@@ -1,4 +1,4 @@
-import './Poem.css';
+import styles from './Poem.module.css';
 
 const poem = {
   lines: [
@@ -11,7 +11,7 @@ const poem = {
 export default function Poem() {
   return (
     <article>
-      <div className='poem'>
+      <div className={styles.poem}>
         {poem.lines.map((line, index) => 
           <p key={index}>
             {line}

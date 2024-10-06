@@ -1,12 +1,12 @@
 import { NavLink } from 'react-router-dom';
-import './HeaderAdvice.css';
+import  styles from './Header.module.css';
 import { IconLogo } from '../../../assets/icons/IconLogoAdvices';
 import { IconBackPage } from '../../../assets/icons/IconBackPage';
 
-function HeaderAdvice() {
+function Header() {
     return (
-        <header className='header_advice'>
-            <div className="logo">
+        <header className={styles.header}>
+            <div className={styles.logo}>
                 <IconLogo/>
                 <p>GanheUmConselho</p>
             </div>
@@ -20,4 +20,4 @@ function HeaderAdvice() {
     )
 }
 
-export default HeaderAdvice;
+export default Header;

@@ -1,16 +1,16 @@
-import List from '../../components/Lists/List';
-import Poem from '../../components/Lists/Poem';
-import RecipeList from '../../components/Lists/RecipeList';
-import TodoList from '../../components/Lists/TodoList';
+import List from '../../components/Ex2_Lists/List';
+import Poem from '../../components/Ex2_Lists/Poem';
+import RecipeList from '../../components/Ex2_Lists/RecipeList';
+import TodoList from '../../components/Ex2_Lists/TodoList';
 import { NavLink } from 'react-router-dom';
 import { IconBackPage } from '../../assets/icons/IconBackPage';
-import './Lists.css';
+import styles from './Lists.module.css';
 
 function ExLists() {
     return (
         <>
-            <header className='header'>
-                <div className="logo">
+            <header className={styles.header}>
+                <div className={styles.logo}>
                     Exercícios Listas
                 </div>
                 <nav>
@@ -25,7 +25,7 @@ function ExLists() {
                 </nav>
             </header>
 
-            <div className='main'>
+            <div className={styles.main}>
                 <div id="exercicio1"><TodoList /></div>
                 <div id="exercicio2"><List /></div>
                 <div id="exercicio3"><RecipeList /></div>

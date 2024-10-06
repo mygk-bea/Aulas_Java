@@ -1,10 +1,10 @@
-import './RecipeList.css';
+import styles from './RecipeList.module.css';
 import { recipes } from './data.js';
 
 export default function RecipeList() {
   return (
-    <div className='container_recipes'>
-      <div className="item">
+    <div className={styles.container}>
+      <div className={styles.item}>
         <h1>Recipes</h1>
         {recipes.map(recipe =>
           <div key={recipe.id}>

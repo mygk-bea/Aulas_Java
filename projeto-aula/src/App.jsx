@@ -1,10 +1,10 @@
-import './App.css'
+import './App.css';
 import { Route, Routes } from 'react-router-dom'
 
 import Home from './pages/Home'
-import Advices from './pages/Advices'
-import ExLists from './pages/Lists'
-import ExInputs from './pages/Inputs'
+import Advices from './pages/Ex1_Advices'
+import ExLists from './pages/Ex2_Lists'
+import ExInputs from './pages/Ex3_Inputs'
 
 function App() {
   return (

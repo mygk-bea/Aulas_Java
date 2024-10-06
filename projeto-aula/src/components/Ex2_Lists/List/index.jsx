@@ -1,4 +1,4 @@
-import './List.css';
+import styles from './List.module.css';
 import { people } from './data.js';
 import { getImageUrl } from './utils.js';
 
@@ -7,8 +7,8 @@ export default function List() {
     const other_professions = people.filter(person => person.profession !== 'chemist');
 
     const listItems = (list) => list.map(person => 
-        <li key={person.id} className='list_item'>
-            <div className="inner">
+        <li key={person.id} className={styles.list_item}>
+            <div className={styles.inner}>
                 <img 
                     src={getImageUrl(person)}
                     alt={person.name}

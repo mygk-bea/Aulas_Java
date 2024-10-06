@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import './Form.css';
+import styles from './Form.module.css';
 
-function FormAdvice() {
+function Form() {
   // let url = "https://api.adviceslip.com/";
 
   // url += (typeAdvice == 1) ? "advice": "daily_adviceslip.rss";
@@ -20,15 +20,15 @@ function FormAdvice() {
     <form>
       <h1>Título</h1>
 
-      <div className="input_form">
+      <div className={styles.input_form}>
         <label htmlFor="">nome_label</label>
         <input type="text" id=''/>
       </div>
-      <div className="input_form">
+      <div className={styles.input_form}>
         <label htmlFor="">nome_label</label>
         <textarea name="" id=""></textarea>
       </div>
-      <div className="input_form">
+      <div className={styles.input_form}>
         <label htmlFor="">Escolha o tipo de conselho: </label>
         <select name="" id="" placeholder="Selecione...">
           <option value="1"></option>
@@ -36,11 +36,11 @@ function FormAdvice() {
         </select>
       </div>
 
-      <div className="btn_form">
+      <div className={styles.btn_form}>
         <button>Enviar</button>
       </div>
     </form>
   )
 }
 
-export default FormAdvice;
+export default Form;

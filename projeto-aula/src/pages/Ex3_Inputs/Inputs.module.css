@@ -1,21 +1,28 @@
-.header_advice{
+html {
+  scroll-behavior: smooth;
+}
+
+.header{
   height: 10vh;
+  width: 100%;
   padding: 0 20px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #EEE;
+  background: #fff;
+  position: fixed;
+  top: 0;
 
   .logo{
-    display: flex;
-    align-items: center;
     font-size: 1.25rem;
     font-weight: bold;
   }
 
   nav{
+    display: flex;
     a{
+      margin-left: 20px;
       color: black;
       display: flex;
       align-items: center;
@@ -28,5 +35,15 @@
         box-shadow: 0 1px 0 0 #000;
       }
     }
+  }
+}
+
+.main {
+  margin-top: 10vh;
+
+  div{
+    scroll-margin-top: 10vh;
+    padding: 10px;
+    border-bottom: 1px solid #999;
   }
 }

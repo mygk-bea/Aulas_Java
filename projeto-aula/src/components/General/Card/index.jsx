@@ -1,16 +1,16 @@
 import { NavLink } from 'react-router-dom';
-import './Card.css';
+import styles from './Card.module.css';
 
 function Card(props) {
   return (
     <NavLink to={props.rota}>
-      <div className='card'>
+      <div className={styles.card}>
         <h3>{ props.nome }</h3>
-        <div className="info">
+        <div className={styles.info}>
           <p>{ props.aula }</p>
           <p>Data: { props.data }</p>
         </div>
-        <span className="tipo" style={{background: props.tipo}}></span>
+        <span className={styles.tipo} style={{background: props.tipo}}></span>
       </div>
     </NavLink>
   )

@@ -1,23 +1,30 @@
-import ColorSwitch from "../../components/Inputs/ColorSwitch";
-import FeedbackButton from "../../components/Inputs/FeedbackButton";
-import FeedbackForm from "../../components/Inputs/FeedbackForm";
-import Form from "../../components/Inputs/Form";
-import Gallery from "../../components/Inputs/Gallery";
-import LightSwitch from "../../components/Inputs/LightSwitch";
+import ColorSwitch from "../../components/Ex3_Inputs/ColorSwitch";
+import FeedbackButton from "../../components/Ex3_Inputs/FeedbackButton";
+import FeedbackForm from "../../components/Ex3_Inputs/FeedbackForm";
+import Form from "../../components/Ex3_Inputs/Form";
+import Gallery from "../../components/Ex3_Inputs/Gallery";
+import LightSwitch from "../../components/Ex3_Inputs/LightSwitch";
+import styles from './Inputs.module.css';
 import { NavLink } from 'react-router-dom';
 import { IconBackPage } from '../../assets/icons/IconBackPage';
-import '../Lists/Lists.css';
-import './Inputs.css';
+import { useState } from "react";
 
 function ExInputs() {
+
+    // Variável de Estado para alterar o fundo apenas da main, para não afetar as outras páginas
+    const [backgroundColor, setBackgroundColor] = useState('');
     function handleColorChange() {
-        document.body.style.backgroundColor = 'lightgreen';
+        if(backgroundColor == 'lightgreen') {
+            setBackgroundColor('');
+        } else {
+            setBackgroundColor('lightgreen');
+        }
     }
 
     return (
         <>
-            <header className='header'>
-                <div className="logo">
+            <header className={styles.header}>
+                <div className={styles.logo}>
                     Exercícios Inputs
                 </div>
                 <nav>
@@ -28,7 +35,7 @@ function ExInputs() {
                 </nav>
             </header>
 
-            <div className='main main_inputs'>
+            <div className={styles.main} style={{ backgroundColor }}>
                 <div id="exercicio1">
                     <h3>Ex 1.</h3>
                     <LightSwitch />
