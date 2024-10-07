@@ -1,6 +1,11 @@
+form{
+  box-sizing: border-box;
+  min-width: 260px;
+  width: 280px;
+}
+
 .input_form{
-  width: 300px;
-  margin: 10px 0;
+  margin: 10px;
   display: flex;
   flex-direction: column;
 
@@ -15,16 +20,21 @@
   }
 }
 
+textarea{
+  min-height: 80px;
+}
+
 .btn_form{
   margin: 15px 0;
   display: flex;
   justify-content: end;
-
+  
   button{
     border: 1px solid #CCC;
     border-radius: 5px;
     padding: 10px 20px;
     font-size: .8rem;
+    font-weight: bold;
     text-transform: uppercase;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
   }

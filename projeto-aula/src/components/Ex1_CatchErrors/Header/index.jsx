@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import  styles from './Header.module.css';
-import { IconLogo } from '../../../assets/icons/IconLogoAdvices';
+import { IconLogo } from '../../../assets/icons/IconLogoCat';
 import { IconBackPage } from '../../../assets/icons/IconBackPage';
 
 function Header() {
@@ -8,7 +8,7 @@ function Header() {
         <header className={styles.header}>
             <div className={styles.logo}>
                 <IconLogo/>
-                <p>GanheUmConselho</p>
+                <p>GatosHTTP</p>
             </div>
             <nav>
                 <NavLink to="/">

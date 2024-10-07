@@ -12,6 +12,10 @@
     align-items: center;
     font-size: 1.25rem;
     font-weight: bold;
+
+    svg{
+      font-size: 2rem;
+    }
   }
 
   nav{
@@ -28,5 +32,11 @@
         box-shadow: 0 1px 0 0 #000;
       }
     }
+  }
+}
+
+@media(max-width: 336px) {
+  .header nav a svg{
+    display: none;
   }
 }

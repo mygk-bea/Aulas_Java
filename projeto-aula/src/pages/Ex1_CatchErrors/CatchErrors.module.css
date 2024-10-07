@@ -1,27 +1,32 @@
 .container{
   .generate{
-    margin: 40px;
+    margin: 30px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 
     .content{
+      width: 280px;
+
       display: flex;
       padding: 20px;
       border-radius: 20px;
       background: #EEE;
+    }
 
-      .response{
-        padding: 0 10px;
-        margin-left: 20px;
+    .response{
+      padding: 0 10px;
+      width: 280px;
+      height: auto;
+
+      h1{
+        text-align: center;
+      }
+
+      .catImage img{
         border-radius: 5px;
-        width: 250px;
-        height: auto;
-        background: #FFF;
-
-        h1{
-          text-align: center;
-        }
+        width: 100%;
       }
     }
   }
