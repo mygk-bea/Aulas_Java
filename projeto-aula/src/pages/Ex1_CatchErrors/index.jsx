@@ -4,6 +4,7 @@ import Footer from '../../components/Ex1_CatchErrors/Footer';
 import Form from '../../components/Ex1_CatchErrors/Form';
 import styles from './CatchErrors.module.css';
 import { fetchCatError } from './api';
+import Carrossel from '../../components/Ex1_CatchErrors/Carrossel';
 
 function CatchErrors() {
   const [catUrl, setCatUrl] = useState('');
@@ -29,6 +30,7 @@ function CatchErrors() {
     <>
       <Header />
       <main className={styles.container}>
+        <Carrossel />
         <section className={styles.generate}>
           <div className={styles.form}>
             <Form registeredData={handleDataUpdate}/>
@@ -43,9 +45,6 @@ function CatchErrors() {
               </div>
             </div>
           </div>
-        </section>
-        <section className={styles.slides}>
-          
         </section>
       </main>
       <Footer />

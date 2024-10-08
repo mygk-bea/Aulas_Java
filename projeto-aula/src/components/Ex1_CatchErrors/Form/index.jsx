@@ -42,8 +42,8 @@ function Form(props) {
 
         <div className={styles.input_form}>
           <label>Escolha o código de status: </label>
-          <select value={selectedCode} onChange={handleChange}>
-            <option value="0" hidden>Selecione...</option>
+          <select value={selectedCode} onChange={handleChange} required>
+            <option value="" hidden>Selecione...</option>
             {httpErrorsExplanation.map(error => (
               <option key={error.code} value={error.code}>{`${error.code}`}</option>
             ))}
