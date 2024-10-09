@@ -13,9 +13,12 @@ export default function Poem() {
     <article>
       <div className={styles.poem}>
         {poem.lines.map((line, index) => 
-          <p key={index}>
-            {line}
-          </p>
+          <>
+            <p key={index}>
+              {line}
+            </p>
+            <hr />
+          </>
         )}
       </div>
     </article>
